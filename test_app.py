@@ -16,5 +16,5 @@ class TestApp:
         assert True
 
     if __name__ == '__main__':
-        print("run with 'pytest -v test_fungsi.py'") #jalan
+        print("run with 'pytest -v test_fungsi.py'")
         pytest.main
