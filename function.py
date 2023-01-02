@@ -15,13 +15,10 @@ def get_feature(text):
  def get_feature_text(text):
     if len(text)==2:
         return {'spam':'', 'ham':text[-1]}
-        # return {'ham':text[-1]}  # script ganti
     else:
         return {'spam':DataFrame.rename(text[-2])[0], 'ham':DataFrame.rename(text[-1])[0]}
 
-      # get all data
 def get_data(df, get_feature=get_feature):
-    # dataframe -> List[(feature dict, label),...]
     featrues = []
     for k, row in df.iterrows():
         text = row['v1']; gender = row['v2']
@@ -72,10 +69,6 @@ if __name__ == '__main__':
     
     print('-wait a minute-')
     show_type_of_text("spam")
-    # print('text:')
-    # show_type_of_text("FreeMsg Hey there darling it's been 3 week's now and no word back!", False)
-    print('Take a name: (give text and first word)')    # Take a name: (give gender and first word
-    give_type(type1='Go until jurong point, crazy..')   # red
-    # print('accuracy: ')
-    # get_train_test(0.5)
-    # print(get_train_test == 1)
+    print('Take a name: (give text and first word)')    
+    give_type(type1='Go until jurong point, crazy..')   
+    
