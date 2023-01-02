@@ -64,7 +64,6 @@ def give_type(type1='spam', type2='ham'):
     print(f'{type2}: {type1}{x}')
 
 if __name__ == '__main__':
-    
     print('-wait a minute-')
     show_type_of_text("spam")
     print('Take a name: (give text and first word)')    
