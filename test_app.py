@@ -1,4 +1,4 @@
-from fungsi import *
+from function import *
 import pytest
 
 class TestApp:
