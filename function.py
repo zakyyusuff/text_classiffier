@@ -33,13 +33,11 @@ def get_data(df, get_feature=get_feature):
     return featrues
   
 def get_train_test(featrues, ratio=0.9):
-    # Split training data set, test data set
+
     N = len(featrues)
     T = int(N * ratio)
     train = featrues[:T]
     test = featrues[T:]
-    # print(N, T)
-    # print(train, test)
     return train, test
 
 def text_classifier(df, f=get_feature):
