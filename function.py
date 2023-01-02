@@ -21,15 +21,15 @@ def get_feature(text):
 def get_data(df, get_feature=get_feature):
     featrues = []
     for k, row in df.iterrows():
-        text = row['v1']; gender = row['v2']
+        text = row['v1']; type = row['v2']
         if isinstance(text, str):
             if ' ' in text:
                 text = text.replace(' ', '')
             if '(' not in text:
-                featrues.append((get_feature(text), gender.strip('() ')))
+                featrues.append((get_feature(text), type.strip('() ')))
             else:
                 text = text.partition('(')[0]
-                featrues.append((get_feature(text), gender.strip('() ')))
+                featrues.append((get_feature(text), type.strip('() ')))
     return featrues
   
 def get_train_test(featrues, ratio=0.9):
