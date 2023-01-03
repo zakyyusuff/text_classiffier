@@ -33,7 +33,6 @@ def get_data(df, get_feature=get_feature):
     return featrues
   
 def get_train_test(featrues, ratio=0.9):
-
     N = len(featrues)
     T = int(N * ratio)
     train = featrues[:T]
